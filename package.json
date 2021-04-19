@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/angelring127/webpack-config#readme",
   "devDependencies": {
+    "css-loader": "^5.2.3",
+    "style-loader": "^2.0.0",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0"
   }
