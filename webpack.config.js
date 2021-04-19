@@ -1,8 +1,12 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path');
+
 module.exports = {
   entry: "./script.js",
   output: {
-    path: __dirname,
-    filename: "build.js",
+    publicPath: '/dist/',
+    path: path.resolve(__dirname, 'dist'),
+    filename: "main.js",
   },
   module: {
     rules: [
@@ -12,4 +16,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [new CleanWebpackPlugin({
+    cleanAfterEveryBuildPatterns: ['dist']
+})],
 }
